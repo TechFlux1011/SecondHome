@@ -1,10 +1,10 @@
-package com.ffluxxsoft.backend;
+package com.ffluxxSoft.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BackendApplicationTests {
+class SecondHomeApplicationTests {
 
 	@Test
 	void contextLoads() {
