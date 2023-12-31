@@ -8,6 +8,6 @@ public class ReactController {
 
     @RequestMapping(value = "/")
     public String index() {
-        return "forward:/frontend/index.html";
+        return "forward:/frontend/build/index.html";
     }
 }
