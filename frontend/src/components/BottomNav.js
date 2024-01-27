@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import HomeIcon from '@mui/icons-material/Home';
@@ -25,13 +25,20 @@ const BottomNav = () => {
   };
 
   return (
-    <BottomNavigation value={value} onChange={handleChange}>
-      <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-      <BottomNavigationAction label="Cart" icon={<ShoppingCartIcon />} />
-      {/* Add other navigation actions */}
-    </BottomNavigation>
+    <nav className="bottom-nav">
+      <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
+        Home
+      </NavLink>
+      <NavLink to="/cart" className={({ isActive }) => (isActive ? 'active' : '')}>
+        Cart
+      </NavLink>
+      <NavLink to="/product-matching" className={({ isActive }) => (isActive ? 'active' : '')}>
+        Products
+      </NavLink>
+      {/* Add more NavLink components as needed */}
+    </nav>
   );
-};
+}
 
 export default BottomNav;
 
